@@ -60,7 +60,8 @@ def call(body) {
 
 
 
-  def buildNode = config.buildNode ?: 'jenkins-slave-all'
+  //def buildNode = config.buildNode ?: 'jenkins-slave-all'
+  def buildNode = config.buildNode ?: true
 
   properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '',
                                           artifactNumToKeepStr: '15',
